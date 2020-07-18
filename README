@@ -1,0 +1,23 @@
+The purpose of this web app is to be able to upload an image, and 
+store it in Firebase Storage with a reference to the image in Firebase
+Database so we can retreive the image later. 
+
+If you decide to connect your own Firebase, you will need to change the 
+credentials in "app.js" 
+
+Here's a list of the files and their purpose:
+    - index.php: Dynamically lays out the webpage for easy expansion 
+                 and deployment with Heroku using the PHP buildpack
+    - header.html: Contains the head, title, and css link all pages need
+    - landing.html: Contains the content of the page 
+    - footer.html: Contains the links to the Firebase Libraries, JQuery, 
+                   and the local Javascript files
+    - style.css: Styling for the webpage
+    - app.js: Connects the app to the Firebase and carries out a set of 
+              instructions such as storing the image, and creating a Database 
+              reference for it. 
+
+You can find a live deployment of the site here: 
+https://firebase-image-send.herokuapp.com/
+And the partner site, which receives the image here: 
+https://firebase-image-receive.herokuapp.com/

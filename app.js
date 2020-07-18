@@ -1,5 +1,8 @@
 
 // Your web app's Firebase configuration
+
+// If you migrate this program to a new Firebase, you will need to 
+// copy the new credentials from the account you are using. 
 var firebaseConfig = {
 apiKey: "AIzaSyCc-C3sHPt_yDu8lrzI9Ffh1SmifJotpzg",
 authDomain: "send-receive-5c5ea.firebaseapp.com",
@@ -27,8 +30,10 @@ function send() {
     //gs://send-receive-5c5ea.appspot.com/images/APCS.PNG
     // saves url reference to database to use to retreive image later
     var databaseRef = firebase.database().ref('imageURLs/2'); 
-    
     databaseRef.set({imageName : file.name});
+
+    // at the moment, the reference is just overwriting itself in the DB
+    // this would likley have to be improved on or changed
 }
 
 
